@@ -1,0 +1,39 @@
+body {max-width: 1000px;
+line-height: 1.25; font-family: MeiryoKe_Gothic, "Ricty Diminished", "Courier New", Courier, Monaco, Menlo, Consolas, "Lucida Console", "Osaka|“™•", "Osaka-“™•", Osaka-mono, "‚l‚r ƒSƒVƒbƒN", "MS Gothic", monospace;}
+td {
+	padding: .2em .2em;
+	border: 1px solid #aaa;
+	white-space:nowrap;
+	vertical-align: middle;
+}
+th {
+	background-color: #22598E;
+	color:#fff;
+	padding: .2em .2em;
+	border: 1px solid #aaa;
+	position: sticky;
+	top: -1px;  z-index: 2;
+	vertical-align: middle;
+}
+table tbody tr:hover{
+	background-color: #fffae9;
+}
+.table-ginga table {text-align: right;}
+.table-wrapper { 
+	max-width:95vw;
+	max-height:40vh;
+	overflow: scroll;
+	-ms-overflow-style: none;    /* IE, Edge ‘Î‰ */
+	scrollbar-width: none;       /* Firefox ‘Î‰ */
+}
+.table-wrapper::-webkit-scrollbar {
+    display:none;/* Chrome, Safari ‘Î‰ */
+}
+.table-wrapper table th {    text-align: right;}
+.table-wrapper table td {    text-align: right;}
+.table-math {max-width:95vw; overflow-x: hidden; overflow-y: hidden;}
+.table-math table td {    text-align: left;}
+table td.left { text-align: center;}
+table tr.red { color: red;}
+
+

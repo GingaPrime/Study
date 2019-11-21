@@ -1,0 +1,117 @@
+﻿<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <ul>
+        <li><h4>最小ギンガ素数と最大ギンガ素数の和は1111111111110になる</h4></li>
+        <div class="table-ginga">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="d1">A</th>
+                        <th class="d1">B</th>
+                        <th class="d1">C</th>
+                        <th class="d1">D</th>
+                        <th class="d2">ABABCCBCBADB</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="d1">1</td>
+                        <td class="d1">3</td>
+                        <td class="d1">2</td>
+                        <td class="d1">8</td>
+                        <td class="d2">131322323183</td>
+                    </tr>
+                    <tr>
+                        <td class="d1">9</td>
+                        <td class="d1">7</td>
+                        <td class="d1">8</td>
+                        <td class="d1">2</td>
+                        <td class="d2">979788787927</td>
+                    </tr>
+                    <tr>
+                        <td class="d1">10</td>
+                        <td class="d1">10</td>
+                        <td class="d1">10</td>
+                        <td class="d1">10</td>
+                        <td class="d2">1111111111110</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <A href="https://ideone.com/3ubMpg">
+            ※参考Link(全ギンガ素数)
+        </A>
+
+        <li><h4>10進数以外のギンガ数はこの特徴を持たない</h4></li>
+        <a href="1.html">※詳細</a>
+
+        <li><h4>10進数のギンガ素数がこの特徴を持つ確率は2パーセント程度</h4></li>
+        <a href="2.html">※詳細</a>
+
+        <li><h4>用語の定義(銀河素数)</h4></li>
+        ギンガマン以外の歌詞を検証する為に便宜上以下の通りに定義する。
+        <br>
+        歌詞をN進数で表した時に、
+        <br>
+        最小素数と最大素数の和が全ての桁でNになる場合、
+        <br>
+        その素数のペアを銀河素数と呼び、
+        <br>
+        その歌詞を、基数Nに銀河素数を持つ歌詞と呼ぶ。
+
+        <li><h4>銀河素数を持つ文字列はギンガマン以外にも多数存在する</h4></li>
+        <a href="3.html">※詳細</a>
+        <BR />
+        <BR />
+        <a href="DecimalGingaPrimeNumbers.html">
+            <small>
+                (10進数に銀河素数を持つ計算済み文字列一覧)
+            </small>
+        </a>
+        <li><h4>銀河素数を期待できる歌詞について</h4></li>
+        <a href="4.html">※詳細</a>
+        <li><h4>10進数以外に銀河素数を持つ歌詞</h4></li>
+        <a href="5.html">※詳細</a>
+        <ul>
+            <li>ガオガイガー</li>
+            <li>ゴレンジャー</li>
+            <li>鋼鉄ジーグ</li>
+        </ul>
+        <li><h4>10進数に銀河素数を持つ歌詞</h4></li>
+        <font color="red">
+            <b>
+                ギンガマン以外に10進数に銀河素数を持つ歌詞は見つかっていません。
+            </b>
+        </font>
+        <BR />
+        ※誰か見つけてください。
+        <BR />
+        <table>
+            <tr>
+                <form action="#" id="sform">
+                    <td>
+                        <input id="stxt" name="lyric" type="text" placeholder="歌詞を入力"
+                               style="width:100%; box-sizing:border-box" />
+                    </td>
+                    <td>
+                        <input id="sbtn" type="button" value="銀河素数か確認" onclick="onButtonClick();">
+                    </td>
+                </form>
+            </tr>
+        </table>
+        <script type="text/javascript" language="javascript">
+            function onButtonClick() {
+                txt = 'https://gingaprime.github.io/Calculator/?lyric=';
+                txt = txt + document.forms.sform.stxt.value;
+                txt = txt + '&min=10&max=10#';
+                window.location.href = txt;
+            }
+        </script>
+    </ul>
+    <hr />
+</body>
+</html>
