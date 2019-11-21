@@ -1,0 +1,81 @@
+﻿<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h4>銀河素数を持つ全ての歌詞に共通した特徴</h4>
+    <ul>
+        <li>
+            銀河素数は\(要素数=2～\frac{歌詞長}{2}\)程度の範囲に集中している
+        </li>
+        要素数が多くなる程いずれかの要素に0を含む確率が上がる為、
+        <br />
+        要素数は少ない方が、より銀河素数を期待できる。
+        <br />
+        実際に歌詞長1～12までの基数10の銀河素数は以下の通りに分布している。
+        <BR>
+        <small>　※ラベル名部分クリックで表示/非表示切り替え</small>
+        <canvas id="DGPNL_bunpu"></canvas>
+        <script>
+        var ctx = document.getElementById('DGPNL_bunpu').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [
+                    1,2,3,4,5,6,7,8,9,10,11,12
+                ],
+                datasets: [
+                    {label: '歌詞長1',data: [0                                ],backgroundColor:"#7b9ad0"}
+                   ,{label: '歌詞長2',data: [0,1                              ],backgroundColor:"#f8e352"}
+                   ,{label: '歌詞長3',data: [0,1,0                            ],backgroundColor:"#c8d627"}
+                   ,{label: '歌詞長4',data: [0,0,0,0                          ],backgroundColor:"#d5848b"}
+                   ,{label: '歌詞長5',data: [0,3,0,0,0                        ],backgroundColor:"#e5ab47"}
+                   ,{label: '歌詞長6',data: [0,3,9,0,0,0                      ],backgroundColor:"#e1cea3"}
+                   ,{label: '歌詞長7',data: [0,3,9,0,0,0,0                    ],backgroundColor:"#51a1a2"}
+                   ,{label: '歌詞長8',data: [0,2,35,7,0,0,0,0                 ],backgroundColor:"#b1d7e4"}
+                   ,{label: '歌詞長9',data: [0,13,132,68,0,0,0,0,0            ],backgroundColor:"#66b7ec"}
+                   ,{label: '歌詞長10',data:[0,9,195,187,0,0,0,0,0,0          ],backgroundColor:"#c08e47"}
+                   ,{label: '歌詞長11',data:[0,29,693,814,11,0,0,0,0,0,0      ],backgroundColor:"#ae8dbc"}
+                   ,{label: '歌詞長12',data:[0,101,4590,8898,187,0,0,0,0,0,0,0],backgroundColor:"#c3cfa9"}
+                ]
+            },
+            options: {
+                scales: {
+                    yAxes: [{ scaleLabel: { display: true,labelString: '基数10銀河素数量' },}]
+                    ,xAxes: [{ scaleLabel: { display: true,labelString: '要素数' },}]
+                }
+            }
+        });
+        </script>
+        <li>
+            同じフレーズを繰り返すだけの歌詞で無いこと
+        </li>
+        完全に同じフレーズの繰り返しだと、
+        <BR>
+        必ず繰り返しフレーズの合成数となる為素数が発生しない。
+    </ul>
+    <h4>銀河素数を持つ歌詞の60%程度に当てはまる傾向</h4>
+    <ul>
+        <li>
+            要素Bが最下位桁にも存在する
+        </li>
+        この条件を満たす場合、最小素数側のBが0になることが無いので、
+        <BR />
+        この条件を満たさない歌詞よりも銀河素数を期待できる。
+    </ul>
+    <br />
+    つまり、
+    <br />
+    <b>
+        単純な繰り返しではない、出来るだけ使う文字の種類が少ない歌詞である事が前提で、
+        <br />
+        先頭から見て2種類目の文字と最後の文字が一致している歌詞ならより期待出来る。
+    </b>
+    <br />
+    <br />
+    <hr />
+</body>
+</html>

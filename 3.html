@@ -1,0 +1,67 @@
+﻿<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    銀河素数を持つ文字列は、
+    <br />
+    例えば基数10に銀河素数を持つ"AB"、"AAB"や、
+    <table>
+        <tr><td>AB</td><td>13</td><td>97</td></tr>
+        <tr><td>AAB</td><td>113</td><td>997</td></tr>
+    </table>
+    基数13に銀河素数を持つ"AAAAAAAABACA"など、
+    <br />
+    ※括弧内は10進数で表記した値
+    <div class="table-ginga">
+        <table>
+            <tr><td>AAAAAAAABACA</td><td>111111112151<BR>(1941507095789)</td><td>ccccccccbc8c<br>(23298085120231)</td></tr>
+        </table>
+    </div>
+    文字列のパターンや基数毎に、多数存在する。
+    <br />
+    歌詞の長さごとの銀河素数量は以下の通り。
+    <br />
+    <br />
+    ※括弧付きの値は全歌詞パターンの計算が出来ていない、
+    <br />
+    または銀河素数を期待出来る基数量に対して計算量が充分で無い為、
+    <br />
+    少なくとも存在する数量を記載している。
+    <div class="table-ginga">
+        <table>
+            <thead>
+                <tr>
+                    <th>歌詞の長さ</th>
+                    <th>全歌詞パターン数</th>
+                    <th>素数を持つ歌詞の総数</th>
+                    <th>銀河素数歌詞の総数</th>
+                    <th>基数10銀河素数歌詞の総数</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="d3">1</td>   <td class="d3"> 1</td>          <td class="d3"> 1</td>          <td class="d3">1</td>   <td class="d3">0</td>   </tr>
+                <tr><td class="d3">2</td>   <td class="d3"> 2</td>          <td class="d3"> 2</td>          <td class="d3">2</td>   <td class="d3">1</td>   </tr>
+                <tr><td class="d3">3</td>   <td class="d3"> 5</td>          <td class="d3"> 5</td>          <td class="d3">4</td>   <td class="d3">1</td>   </tr>
+                <tr><td class="d3">4</td>   <td class="d3"> 15</td>         <td class="d3"> 12</td>         <td class="d3">7</td>   <td class="d3">0</td>   </tr>
+                <tr><td class="d3">5</td>   <td class="d3"> 52</td>         <td class="d3"> 52</td>         <td class="d3">27</td>  <td class="d3">3</td>   </tr>
+                <tr><td class="d3">6</td>   <td class="d3"> 203</td>        <td class="d3"> 183</td>        <td class="d3">93</td>  <td class="d3">12</td>  </tr>
+                <tr><td class="d3">7</td>   <td class="d3"> 877</td>        <td class="d3"> 877</td>        <td class="d3">216</td> <td class="d3">12</td>  </tr>
+                <tr><td class="d3">8</td>   <td class="d3"> 4140</td>       <td class="d3"> 3966</td>       <td class="d3">860</td> <td class="d3">44</td>  </tr>
+                <tr><td class="d3">9</td>   <td class="d3"> 21147</td>      <td class="d3"> 21080</td>      <td class="d3">1605</td>    <td class="d3">213</td> </tr>
+                <tr><td class="d3">10</td>  <td class="d3">115975</td>      <td class="d3">114464</td>      <td class="d3">11240</td>   <td class="d3">391</td> </tr>
+                <tr><td class="d3">11</td>  <td class="d3">678570</td>      <td class="d3">678570</td>      <td class="d3">12951</td>   <td class="d3">1547</td>    </tr>
+                <tr><td class="d3">12</td>  <td class="d3">4213597</td>     <td class="d3">4176938</td>     <td class="d3">(145458)</td>  <td class="d3">13776</td>   </tr>
+                <tr><td class="d3">13</td>  <td class="d3">27644437</td>    <td class="d3"></td>            <td class="d3"></td>    <td class="d3"></td>    </tr>
+                <tr><td class="d3">14</td>  <td class="d3">190899322</td>   <td class="d3"></td>            <td class="d3"></td>    <td class="d3"></td>    </tr>
+                <tr><td class="d3">15</td>  <td class="d3">1382958545</td>  <td class="d3"></td>            <td class="d3"></td>    <td class="d3"></td>    </tr>
+                <tr><td class="d3">16</td>  <td class="d3">10480142147</td> <td class="d3"></td>            <td class="d3"></td>    <td class="d3"></td>    </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

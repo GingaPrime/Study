@@ -1,0 +1,418 @@
+﻿<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>GPN</title>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <ul>
+        <li><h4>ガオガイガー</h4></li>
+        銀河素数を期待出来るフレーズは
+        <BR>
+        「ガガガッガガガッガオガイガー」と
+        <BR>
+        「ガガガッガガガガッガオガイガー」の2種類があり、
+        <BR>
+        促音と長音の有無ごとに符号化文字列をパターン分けすると以下8通りになる。
+        <div class="table-math">
+            <table>
+                <thead>
+                    <tr><th>No</th><th>歌詞タイプ</th><th>促音</th><th>長音</th><th>符号化文字列</th><th>素数</th><th>銀河素数</th><th>基数10<BR>銀河素数</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>  ガガガ</td><td>  有</td><td>  有</td><td>AAABAAABACADAE </td><td>  有</td><td>なし</td><td>なし</td></tr>
+                    <tr><td>2</td><td>  ガガガ</td><td>  有</td><td>なし</td><td>AAABAAABACADA  </td><td>  有</td><td>なし</td><td>なし</td></tr>
+                    <tr><td>3</td><td>  ガガガ</td><td>なし</td><td>  有</td><td>AAAAAAABACAD   </td><td>  有</td><td>なし</td><td>なし</td></tr>
+                    <tr><td>4</td><td>  ガガガ</td><td>なし</td><td>なし</td><td>AAAAAAABACA    </td><td>  有</td><td>なし</td><td>なし</td></tr>
+                    <tr><td>5</td><td>ガガガガ</td><td>  有</td><td>  有</td><td>AAABAAAABACADAE</td><td>  有</td><td>なし</td><td>なし</td></tr>
+                    <tr><td>6</td><td>ガガガガ</td><td>  有</td><td>なし</td><td>AAABAAAABACADA </td><td>  有</td><td>なし</td><td>なし</td></tr>
+                    <tr><td>7</td><td>ガガガガ</td><td>なし</td><td>  有</td><td>AAAAAAAABACAD  </td><td>  有</td><td>なし</td><td>なし</td></tr>
+                    <tr><td>8</td><td>ガガガガ</td><td>なし</td><td>なし</td><td>AAAAAAAABACA   </td><td>  有</td><td>  有</td><td>なし</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <BR>
+        <b>
+            No.8"AAAAAAAABACA"の場合のみ基数13に銀河素数を持つ。
+        </b>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="base">基数</th>
+                        <th class="minmax">最小素数</th>
+                        <th class="minmax">最大素数</th>
+                        <th class="minmax">和</th>
+                        <th class="decimal2">最小素数<BR>(10進数表示)</th>
+                        <th class="decimal2">最大素数<BR>(10進数表示)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>3</td><td>222222220212</td><td>222222220212</td><td>1222222211201</td><td>531383</td><td>531383</td></tr>
+                    <tr><td>4</td><td>333333332303</td><td>333333332303</td><td>1333333331212</td><td>16777139</td><td>16777139</td></tr>
+                    <tr><td>5</td><td>111111110131</td><td>444444442414</td><td>1111111103100</td><td>61035041</td><td>244140359</td></tr>
+                    <tr><td>6</td><td>111111115121</td><td>555555554535</td><td>1111111114100</td><td>435357337</td><td>2176782107</td></tr>
+                    <tr><td>7</td><td>111111110131</td><td>666666662636</td><td>1111111103100</td><td>2306880871</td><td>13841285807</td></tr>
+                    <tr><td>8</td><td>111111112151</td><td>777777775747</td><td>1111111110120</td><td>9817068649</td><td>68719475687</td></tr>
+                    <tr><td>9</td><td>111111112131</td><td>888888886878</td><td>1111111110120</td><td>35303692807</td><td>282429535013</td></tr>
+                    <tr><td>10</td><td>111111110141</td><td>999999998939</td><td>1111111109080</td><td>111111110141</td><td>999999998939</td></tr>
+                    <tr><td>11</td><td>111111112171</td><td>aaaaaaaa7a0a</td><td>111111110a080</td><td>313842839069</td><td>3138428372617</td></tr>
+                    <tr><td>12</td><td>111111110141</td><td>bbbbbbbbab2b</td><td>111111110b070</td><td>810554584513</td><td>8916100446419</td></tr>
+                    <tr class="red"><td>13</td><td>111111112151</td><td>ccccccccbc8c</td><td>1111111111110</td><td>1941507095789</td><td>23298085120231</td></tr>
+                    <tr><td>14</td><td>111111110141</td><td>ddddddddadcd</td><td>111111110b130</td><td>4361070180013</td><td>56693912367049</td></tr>
+                    <tr><td>15</td><td>111111113121</td><td>eeeeeeeedece</td><td>1111111112100</td><td>9267595570381</td><td>129746337887219</td></tr>
+                    <tr><td>16</td><td>111111110131</td><td>ffffffffef8f</td><td>111111110f0c0</td><td>18764998443313</td><td>281474976706447</td></tr>
+                    <tr><td>17</td><td>111111110171</td><td>ggggggggeg1g</td><td>111111110f090</td><td>36413889822049</td><td>582622237219679</td></tr>
+                    <tr><td>18</td><td>1111111121g1</td><td>hhhhhhhhghah</td><td>1111111111190</td><td>68048904795877</td><td>1156831381420217</td></tr>
+                    <tr><td>19</td><td>1111111131a1</td><td>iiiiiiiigi3i</td><td>11111111110e0</td><td>122961939962009</td><td>2213314919052157</td></tr>
+                    <tr><td>20</td><td>1111111101d1</td><td>jjjjjjjjhj8j</td><td>111111110i120</td><td>215578947360661</td><td>4095999999983779</td></tr>
+                    <tr><td>21</td><td>111111110191</td><td>kkkkkkkkhkek</td><td>111111110i130</td><td>367791375560239</td><td>7355827511358731</td></tr>
+                    <tr><td>22</td><td>111111110171</td><td>lllllllljlcl</td><td>111111110k0k0</td><td>612142982420399</td><td>12855002631027721</td></tr>
+                    <tr><td>23</td><td>111111110131</td><td>mmmmmmmmkmjm</td><td>111111110l100</td><td>996119292352439</td><td>21914624431995917</td></tr>
+                    <tr><td>24</td><td>1111111101j1</td><td>nnnnnnnnmn3n</td><td>111111110n0n0</td><td>1587841192858633</td><td>36520347436042271</td></tr>
+                    <tr><td>25</td><td>111111110191</td><td>oooooooono6o</td><td>111111110o0g0</td><td>2483526865625851</td><td>59604644775374549</td></tr>
+                    <tr><td>26</td><td>111111110171</td><td>ppppppppopcp</td><td>111111110p0k0</td><td>3817158266449867</td><td>95428956661664261</td></tr>
+                    <tr><td>27</td><td>111111110171</td><td>qqqqqqqqoqbq</td><td>111111110p0j0</td><td>5772870588326599</td><td>150094635296959349</td></tr>
+                    <tr><td>28</td><td>1111111101j1</td><td>rrrrrrrrpror</td><td>111111110q1g0</td><td>8600676484764197</td><td>232218265089168427</td></tr>
+                    <tr><td>29</td><td>1111111121h1</td><td>sssssssspsks</td><td>111111110s190</td><td>12636242257363033</td><td>353814783205395641</td></tr>
+                    <tr><td>30</td><td>1111111101a1</td><td>ttttttttstot</td><td>111111110t150</td><td>18325551724111201</td><td>531440999999972849</td></tr>
+                    <tr><td>31</td><td>111111110191</td><td>uuuuuuuutuou</td><td>111111110u130</td><td>26255426126255449</td><td>787662783788519783</td></tr>
+                    <tr><td>32</td><td>111111110191</td><td>vvvvvvvvtvkv</td><td>111111110u0u0</td><td>37191016277607713</td><td>1152921504606781087</td></tr>
+                    <tr><td>33</td><td>1111111101n1</td><td>wwwwwwwwvwuw</td><td>111111110w1l0</td><td>52121547342245569</td><td>1667889514952948957</td></tr>
+                    <tr><td>34</td><td>1111111121n1</td><td>xxxxxxxxwxux</td><td>11111111111k0</td><td>72315778293770387</td><td>2386420683693061649</td></tr>
+                    <tr><td>35</td><td>1111111121d1</td><td>yyyyyyyyxyuy</td><td>1111111111190</td><td>99388838472297431</td><td>3379220508056597609</td></tr>
+                    <tr><td>36</td><td>111111110181</td><td>zzzzzzzzyz7z</td><td>111111110z0g0</td><td>135382323951999793</td><td>4738381338321569231</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <li><h4>ゴレンジャー</h4></li>
+        期待出来るフレーズは「バンバラバンバンバン」(ABACABABAB)
+        <BR>
+        基数=9に銀河素数を持つ。
+        <BR>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="base">基数</th>
+                        <th class="minmax">最小素数</th>
+                        <th class="minmax">最大素数</th>
+                        <th class="minmax">和</th>
+                        <th class="decimal2">最小素数<BR>(10進数表示)</th>
+                        <th class="decimal2">最大素数<BR>(10進数表示)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>3</td><td>1210121212</td><td>1210121212</td><td>10121020201</td><td>35447</td><td>35447</td></tr>
+                    <tr><td>4</td><td>1310131313</td><td>2320232323</td><td>10231030302</td><td>477047</td><td>756667</td></tr>
+                    <tr><td>5</td><td>1310131313</td><td>4241424242</td><td>11102111110</td><td>3208333</td><td>8936197</td></tr>
+                    <tr><td>6</td><td>2123212121</td><td>3132313131</td><td>5255525252</td><td>22552177</td><td>32871151</td></tr>
+                    <tr><td>7</td><td>1412141414</td><td>5650565656</td><td>10363040403</td><td>64498613</td><td>240575047</td></tr>
+                    <tr><td>8</td><td>1517151515</td><td>7574757575</td><td>11314131312</td><td>222090061</td><td>1039392637</td></tr>
+                    <tr class="red"><td>9</td><td>1418141414</td><td>8581858585</td><td>11111111110</td><td>568728229</td><td>3353904221</td></tr>
+                    <tr><td>10</td><td>1315131313</td><td>9794979797</td><td>11110111110</td><td>1315131313</td><td>9794979797</td></tr>
+                    <tr><td>11</td><td>1214121212</td><td>a8a7a8a8a8</td><td>1101110100a</td><td>2813430787</td><td>25503362629</td></tr>
+                    <tr><td>12</td><td>1510151515</td><td>b7b4b7b7b7</td><td>11105111110</td><td>7345875617</td><td>60176452027</td></tr>
+                    <tr><td>13</td><td>1412141414</td><td>cac7cacaca</td><td>1120a121211</td><td>13940312819</td><td>136202838899</td></tr>
+                    <tr><td>14</td><td>1310131313</td><td>dbd5dbdbdb</td><td>11106111110</td><td>25194483877</td><td>286242763349</td></tr>
+                    <tr><td>15</td><td>1210121212</td><td>ebe7ebebeb</td><td>10e080e0e0d</td><td>43740864467</td><td>568881831821</td></tr>
+                    <tr><td>16</td><td>1310131313</td><td>fdf4fdfdfd</td><td>11105111110</td><td>81874064147</td><td>1090737012221</td></tr>
+                    <tr><td>17</td><td>1310131313</td><td>gfg3gfgfgf</td><td>11204121211</td><td>139927163713</td><td>2008704270799</td></tr>
+                    <tr><td>18</td><td>151a151515</td><td>hdh9hdhdhd</td><td>11112111110</td><td>254413857443</td><td>3526114865323</td></tr>
+                    <tr><td>19</td><td>1216121212</td><td>ihifihihih</td><td>11113111110</td><td>357833715229</td><td>6113941426433</td></tr>
+                    <tr><td>20</td><td>1314131313</td><td>jhjejhjhjh</td><td>1110j111110</td><td>590339689223</td><td>10188479679197</td></tr>
+                    <tr><td>21</td><td>1214121212</td><td>kjk5kjkjkj</td><td>1110a111110</td><td>872074401557</td><td>16640771432101</td></tr>
+                    <tr><td>22</td><td>131f131313</td><td>ljldljljlj</td><td>11117111110</td><td>1376097763373</td><td>26449263535637</td></tr>
+                    <tr><td>23</td><td>131m131313</td><td>mlmjmlmlml</td><td>1121j121211</td><td>2042754521957</td><td>41347755840329</td></tr>
+                    <tr><td>24</td><td>1513151515</td><td>njnhnjnjnj</td><td>1110l111110</td><td>3197353529693</td><td>62961931761403</td></tr>
+                    <tr><td>25</td><td>1210121212</td><td>onolononon</td><td>1110m111110</td><td>4125987126277</td><td>95214110936873</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <li><h4>鋼鉄ジーグ</h4></li>
+        期待出来るフレーズは、
+        <BR>
+        ①「ダンダダダダンダダンダーダダン」
+        <BR>
+        ②「ダンダダダダンダダンダン」
+        <BR>
+        ③「バラバラババンバーン、ババンバ、バンバンバンバンババンバーン」
+        <BR>
+        <BR>
+        ①は長音を除いた場合に基数=26,32,66に銀河素数を持つ。(ABAAAABAABAAAB)
+        <BR>
+        ②は基数=60,66,104,114,140,152に銀河素数を持つ。(ABAAAABAABAB)
+        <BR>
+        ③については区切り位置や長音の有無を調整しても銀河素数は見つからなかった。
+        <BR>
+        <BR>
+        ①ABAAAABAABAAAB
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="base">基数</th>
+                        <th class="minmax">最小素数</th>
+                        <th class="minmax">最大素数</th>
+                        <th class="minmax">和</th>
+                        <th class="decimal2">最小素数<BR>(10進数表示)</th>
+                        <th class="decimal2">最大素数<BR>(10進数表示)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>2</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>3</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>4</td><td>13111131131113</td><td>13111131131113</td><td>32222322322232</td><td>123066199</td><td>123066199</td></tr>
+                    <tr><td>5</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>6</td><td>31333313313331</td><td>31333313313331</td><td>103111031031102</td><td>42664371319</td><td>42664371319</td></tr>
+                    <tr><td>7</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>8</td><td>37333373373337</td><td>37333373373337</td><td>76666766766676</td><td>2159763388127</td><td>2159763388127</td></tr>
+                    <tr><td>9</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>10</td><td>17111171171117</td><td>91999919919991</td><td>109111091091108</td><td>17111171171117</td><td>91999919919991</td></tr>
+                    <tr><td>11</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>12</td><td>25222252252225</td><td>57555575575557</td><td>80777807807780</td><td>260188129729469</td><td>601431574669267</td></tr>
+                    <tr><td>13</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>14</td><td>13111131131113</td><td>6d6666d66d666d</td><td>82777827827782</td><td>968157791466589</td><td>5525476659663449</td></tr>
+                    <tr><td>15</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>16</td><td>5b5555b55b555b</td><td>a3aaaa3aa3aaa3</td><td>feffffeffefffe</td><td>25708049483912539</td><td>46068069308803747</td></tr>
+                    <tr><td>17</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>18</td><td>2d2222d22d222d</td><td>h7hhhh7hh7hhh7</td><td>123222232232222</td><td>56820842235037273</td><td>363245047644569173</td></tr>
+                    <tr><td>19</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>20</td><td>4h4444h44h444h</td><td>i1iiii1ii1iii1</td><td>12j3332j32j332i</td><td>398174332431553697</td><td>1482536399289911561</td></tr>
+                    <tr><td>21</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>22</td><td>35333353353335</td><td>l5llll5ll5lll5</td><td>12b3332b32b332a</td><td>914541620740971371</td><td>6016141191417558767</td></tr>
+                    <tr><td>23</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>24</td><td>3j3333j33j333j</td><td>jdjjjjdjjdjjjd</td><td>n8mmmn8mn8mmn8</td><td>3328115213648615707</td><td>17158211902654283413</td></tr>
+                    <tr><td>25</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr class="red"><td>26</td><td>1h1111h11h111h</td><td>p9pppp9pp9ppp9</td><td>111111111111110</td><td>4107262423235075303</td><td>62983111268193961711</td></tr>
+                    <tr><td>27</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>28</td><td>2f2222f22f222f</td><td>rjrrrrjrrjrrrj</td><td>127222272272226</td><td>16504698349719714023</td><td>180201373601280489463</td></tr>
+                    <tr><td>29</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>30</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>31</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr class="red"><td>32</td><td>15111151151115</td><td>vrvvvvrvvrvvvr</td><td>111111111111110</td><td>42695286824174126117</td><td>1175979934561540767739</td></tr>
+                    <tr><td>33</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>34</td><td>2b2222b22b222b</td><td>x7xxxx7xx7xxx7</td><td>11j2221j21j221i</td><td>188671866041064622423</td><td>2696655371207562344773</td></tr>
+                    <tr><td>35</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>36</td><td>2b2222b22b222b</td><td>yvyyyyvyyvyyyv</td><td>117111171171116</td><td>393556416433890888179</td><td>5951271578372901244039</td></tr>
+                    <tr><td>37</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>38</td><td>1#1111#11#111#</td><td>##############</td><td>11#1111#11#111#</td><td>643912415107982882419</td><td>12964005207545996153873</td></tr>
+                    <tr><td>39</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>40</td><td>##############</td><td>#1####1##1###1</td><td>1##############</td><td>3844133393060426568229</td><td>24862973736050385788681</td></tr>
+                    <tr><td>41</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>42</td><td>1#1111#11#111#</td><td>##############</td><td>##############</td><td>2200186144550400336613</td><td>49953190674018882615517</td></tr>
+                    <tr><td>43</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>44</td><td>1#1111#11#111#</td><td>##############</td><td>10#1110#10#110#</td><td>3844973149383642422681</td><td>100148080646575400811997</td></tr>
+                    <tr><td>45</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>46</td><td>##############</td><td>##############</td><td>10#0000#00#000#</td><td>11224277158334826315077</td><td>179520613901892446880979</td></tr>
+                    <tr><td>47</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>48</td><td>##############</td><td>##############</td><td>1##############</td><td>19003958009337516028543</td><td>343751714435883173806073</td></tr>
+                    <tr><td>49</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>50</td><td>1#1111#11#111#</td><td>##############</td><td>10#1110#10#110#</td><td>17338966852359818877571</td><td>601074218720312262499961</td></tr>
+                    <tr><td>51</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>52</td><td>##############</td><td>##############</td><td>11####1##1###1#</td><td>41839168205115133975307</td><td>1053022655463677229520373</td></tr>
+                    <tr><td>53</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>54</td><td>1#1111#11#111#</td><td>##############</td><td>##############</td><td>59645999561888162944429</td><td>1705397675437725157249561</td></tr>
+                    <tr><td>55</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>56</td><td>1#1111#11#111#</td><td>##############</td><td>##############</td><td>63745416869757523389059</td><td>2904843712191033174926701</td></tr>
+                    <tr><td>57</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>58</td><td>1#1111#11#111#</td><td>##############</td><td>10#1110#10#110#</td><td>88428171483177270714649</td><td>4799834365740983382521483</td></tr>
+                    <tr><td>59</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>60</td><td>1#1111#11#111#</td><td>##############</td><td>##############</td><td>158942005177456882299673</td><td>7339999353018434996460971</td></tr>
+                    <tr><td>61</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>62</td><td>1#1111#11#111#</td><td>##############</td><td>10#1110#10#110#</td><td>229117829777479625631091</td><td>12272718764020745743995223</td></tr>
+                    <tr><td>63</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>64</td><td>1#1111#11#111#</td><td>##############</td><td>##############</td><td>335362978508273977921607</td><td>18908280439093170938834851</td></tr>
+                    <tr><td>65</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr class="red"><td>66</td><td>1#1111#11#111#</td><td>##############</td><td>111111111111110</td><td>608124218158315632127157</td><td>29608481414254332065842057</td></tr>
+                    <tr><td>67</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>68</td><td>1#1111#11#111#</td><td>##############</td><td>11#1111#11#111#</td><td>1006948141856175080658359</td><td>45100830861490399941686773</td></tr>
+                    <tr><td>69</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>70</td><td>1#1111#11#111#</td><td>##############</td><td>11#1111#11#111#</td><td>1481218329168708228418007</td><td>67600846689552232735839983</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <BR>
+        <BR>
+        ②ABAAAABAABAB
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="base">基数</th>
+                        <th class="minmax">最小素数</th>
+                        <th class="minmax">最大素数</th>
+                        <th class="minmax">和</th>
+                        <th class="decimal2">最小素数<BR>(10進数表示)</th>
+                        <th class="decimal2">最大素数<BR>(10進数表示)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>2</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>3</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>4</td><td>131111311313</td><td>232222322323</td><td>1030000300302</td><td>7691639</td><td>12234427</td></tr>
+                    <tr><td>5</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>6</td><td>414444144141</td><td>515555155151</td><td>1334443343332</td><td>1560003901</td><td>1934886379</td></tr>
+                    <tr><td>7</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>8</td><td>131111311313</td><td>515555155151</td><td>646666466464</td><td>11964617419</td><td>44790241897</td></tr>
+                    <tr><td>9</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>10</td><td>191111911919</td><td>737777377373</td><td>928889289292</td><td>191111911919</td><td>737777377373</td></tr>
+                    <tr><td>11</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>12</td><td>151111511515</td><td>9b9999b99b9b</td><td>b4aaab4ab4b4</td><td>1058225039009</td><td>7418826502247</td></tr>
+                    <tr><td>13</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>14</td><td>232222322323</td><td>a9aaaa9aa9a9</td><td>cccccccccccc</td><td>9011395558427</td><td>43321446634153</td></tr>
+                    <tr><td>15</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>16</td><td>151111511515</td><td>fdffffdffdfd</td><td>1131111311312</td><td>23163049153813</td><td>279275951357437</td></tr>
+                    <tr><td>17</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>18</td><td>252222522525</td><td>g5gggg5gg5g5</td><td>10b1110b10b0a</td><td>146809216929101</td><td>1049507316354713</td></tr>
+                    <tr><td>19</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>20</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>21</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>22</td><td>191111911919</td><td>ljlllljlljlj</td><td>1171111711716</td><td>824622405995243</td><td>12801882775158133</td></tr>
+                    <tr><td>23</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>24</td><td>474444744747</td><td>nbnnnnbnnbnb</td><td>13j4443j43j3i</td><td>6541574938273831</td><td>35759506768913651</td></tr>
+                    <tr><td>25</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>26</td><td>272222722727</td><td>onoooonoonon</td><td>1151111511514</td><td>8340152070611719</td><td>91470631287679459</td></tr>
+                    <tr><td>27</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>28</td><td>353333533535</td><td>rdrrrrdrrdrd</td><td>12j3332j32j2i</td><td>26394423022170089</td><td>228071510114520337</td></tr>
+                    <tr><td>29</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>30</td><td>171111711717</td><td>s1ssss1ss1s1</td><td>t8tttt8tt8t8</td><td>21868491869943337</td><td>497172217619737741</td></tr>
+                    <tr><td>31</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>32</td><td>191111911919</td><td>stsssstsstst</td><td>u6tttu6tu6u6</td><td>46198215800824873</td><td>1042474355714324381</td></tr>
+                    <tr><td>33</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>34</td><td>2d2222d22d2d</td><td>xtxxxxtxxtxt</td><td>1292222922928</td><td>167339712381920597</td><td>2378163172495115627</td></tr>
+                    <tr><td>35</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>36</td><td>1z1111z11z1z</td><td>yvyyyyvyyvyv</td><td>10v0000v00v0u</td><td>259691712970081463</td><td>4592030538867979351</td></tr>
+                    <tr><td>37</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>38</td><td>1#1111#11#1#</td><td>############</td><td>10#0000#00#0#</td><td>345471334308435107</td><td>8814439753094932903</td></tr>
+                    <tr><td>39</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>40</td><td>1#1111#11#1#</td><td>############</td><td>11#1111#11#1#</td><td>702814788303467267</td><td>16567500797951967979</td></tr>
+                    <tr><td>41</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>42</td><td>1#1111#11#1#</td><td>############</td><td>############</td><td>1042308677972910913</td><td>25310354072001365021</td></tr>
+                    <tr><td>43</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>44</td><td>1#1111#11#1#</td><td>############</td><td>10#1110#10#0#</td><td>1442092627821518341</td><td>51620591054850807929</td></tr>
+                    <tr><td>45</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>46</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>47</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>48</td><td>1#1111#11#1#</td><td>############</td><td>10#1110#10#0#</td><td>3572259801798995767</td><td>147250040853007088603</td></tr>
+                    <tr><td>49</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>50</td><td>1#1111#11#1#</td><td>############</td><td>############</td><td>7716836743443947579</td><td>235544882003743529911</td></tr>
+                    <tr><td>51</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>52</td><td>############</td><td>############</td><td>1############</td><td>17785946865881805227</td><td>389720565635616082807</td></tr>
+                    <tr><td>53</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>54</td><td>1#1111#11#1#</td><td>############</td><td>############</td><td>16659747005010358363</td><td>588214772797658515433</td></tr>
+                    <tr><td>55</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>56</td><td>1#1111#11#1#</td><td>############</td><td>############</td><td>20326982420203291907</td><td>919010117288983649557</td></tr>
+                    <tr><td>57</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>58</td><td>1#1111#11#1#</td><td>############</td><td>11#1111#11#1#</td><td>34902698741833889509</td><td>1447502135179378128107</td></tr>
+                    <tr><td>59</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr class="red"><td>60</td><td>1#1111#11#1#</td><td>############</td><td>1111111111110</td><td>44150556993738022873</td><td>2169526394870668756787</td></tr>
+                    <tr><td>61</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>62</td><td>1#1111#11#1#</td><td>############</td><td>10#1110#10#0#</td><td>59604013989979090963</td><td>3189337590259382837411</td></tr>
+                    <tr><td>63</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>64</td><td>1#1111#11#1#</td><td>############</td><td>############</td><td>91099099220316319823</td><td>4593220973961869328271</td></tr>
+                    <tr><td>65</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr class="red"><td>66</td><td>1#1111#11#1#</td><td>############</td><td>1111111111110</td><td>111376046809382167763</td><td>6825402105718773869419</td></tr>
+                    <tr><td>67</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>68</td><td>############</td><td>############</td><td>1#1####1##1#0</td><td>585682825532473353317</td><td>9766323429120497330107</td></tr>
+                    <tr><td>69</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>70</td><td>#1####1##1#1</td><td>############</td><td>11####1##1#1#</td><td>398371977972087411041</td><td>13835637696016638590197</td></tr>
+                    <tr><td>71</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>72</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>73</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>74</td><td>1#1111#11#1#</td><td>############</td><td>10#1110#10#0#</td><td>379214712524092032529</td><td>26658484011147141363401</td></tr>
+                    <tr><td>75</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>76</td><td>1#1111#11#1#</td><td>############</td><td>11#1111#11#1#</td><td>559399055658028077127</td><td>37107546917455999497659</td></tr>
+                    <tr><td>77</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>78</td><td>############</td><td>#1####1##1#1</td><td>11####1##1#1#</td><td>1342276422495643835621</td><td>50081341193847660424963</td></tr>
+                    <tr><td>79</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>80</td><td>1#1111#11#1#</td><td>############</td><td>11#1111#11#1#</td><td>1041665486019011180897</td><td>68698001899513446387197</td></tr>
+                    <tr><td>81</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>82</td><td>1#1111#11#1#</td><td>############</td><td>11#1111#11#1#</td><td>1608311655684365894329</td><td>92310097845201470477527</td></tr>
+                    <tr><td>83</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>84</td><td>1#1111#11#1#</td><td>############</td><td>11#1111#11#1#</td><td>2221456329875614173679</td><td>123095484805422091642829</td></tr>
+                    <tr><td>85</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>86</td><td>1#1111#11#1#</td><td>############</td><td>10#0000#00#0#</td><td>2146885670059632461237</td><td>161638412864995417220003</td></tr>
+                    <tr><td>87</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>88</td><td>1#1111#11#1#</td><td>############</td><td>10#1110#10#0#</td><td>2534678997760492589339</td><td>215559755431256133306107</td></tr>
+                    <tr><td>89</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>90</td><td>############</td><td>############</td><td>1############</td><td>7985519825623935175129</td><td>282220329416904570551393</td></tr>
+                    <tr><td>91</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>92</td><td>1#1111#11#1#</td><td>############</td><td>11#1111#11#1#</td><td>6299109936535085135777</td><td>366971366128018977205999</td></tr>
+                    <tr><td>93</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>94</td><td>1#1111#11#1#</td><td>############</td><td>10#1110#10#0#</td><td>7487329242278685195623</td><td>472796347152077293359389</td></tr>
+                    <tr><td>95</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>96</td><td>1#1111#11#1#</td><td>############</td><td>10#0000#00#0#</td><td>8444074301164034841727</td><td>606326664200429747994527</td></tr>
+                    <tr><td>97</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>98</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>99</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>100</td><td>1#1111#11#1#</td><td>############</td><td>11#1111#11#1#</td><td>12301010101230101230123</td><td>997999999999799999799979</td></tr>
+                    <tr><td>101</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>102</td><td>1#1111#11#1#</td><td>############</td><td>############</td><td>15238637175345673774337</td><td>1249224274684873632052067</td></tr>
+                    <tr><td>103</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr class="red"><td>104</td><td>1#1111#11#1#</td><td>############</td><td>1111111111110</td><td>15840050979024320215339</td><td>1600736169710672788237181</td></tr>
+                    <tr><td>105</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>106</td><td>1#1111#11#1#</td><td>############</td><td>11#1111#11#1#</td><td>34565066113662752580821</td><td>2006465759206184965275487</td></tr>
+                    <tr><td>107</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>108</td><td>1#1111#11#1#</td><td>############</td><td>11#1111#11#1#</td><td>27420365152542209384431</td><td>2515579406822074741280051</td></tr>
+                    <tr><td>109</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>110</td><td>1#1111#11#1#</td><td>############</td><td>11#1111#11#1#</td><td>38649142236340618113049</td><td>3132722143308425687533777</td></tr>
+                    <tr><td>111</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>112</td><td>############</td><td>############</td><td>11####1##1#1#</td><td>75477707585961798435827</td><td>3876098564012445134995391</td></tr>
+                    <tr><td>113</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr class="red"><td>114</td><td>1#1111#11#1#</td><td>############</td><td>1111111111110</td><td>47084991416363496654379</td><td>4813456154251315550558531</td></tr>
+                    <tr><td>115</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>116</td><td>############</td><td>############</td><td>11####1##1#1#</td><td>108087831488160318534853</td><td>5921028162563202652380349</td></tr>
+                    <tr><td>117</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>118</td><td>1#1111#11#1#</td><td>############</td><td>10#1110#10#0#</td><td>66474184897146029006411</td><td>7254096077563351007633087</td></tr>
+                    <tr><td>119</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>120</td><td>1#1111#11#1#</td><td>############</td><td>10#1110#10#0#</td><td>78640255704480055588927</td><td>8904955322695232102140781</td></tr>
+                    <tr><td>121</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>122</td><td>1#1111#11#1#</td><td>############</td><td>11#1111#11#1#</td><td>132219865506280180197593</td><td>10870752472439773266722933</td></tr>
+                    <tr><td>123</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>124</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>125</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>126</td><td>1#1111#11#1#</td><td>############</td><td>11#1111#11#1#</td><td>152301930001643315512483</td><td>15995898295546579606139311</td></tr>
+                    <tr><td>127</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>128</td><td>1#1111#11#1#</td><td>############</td><td>11#1111#11#1#</td><td>232585845280680013021381</td><td>19338090747351059711066107</td></tr>
+                    <tr><td>129</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>130</td><td>1#1111#11#1#</td><td>############</td><td>11#1111#11#1#</td><td>290892104509154841476111</td><td>23287056443132782965464791</td></tr>
+                    <tr><td>131</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>132</td><td>1#1111#11#1#</td><td>############</td><td>11#1111#11#1#</td><td>367780984596058207336501</td><td>27947211163247418485689993</td></tr>
+                    <tr><td>133</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>134</td><td>1#1111#11#1#</td><td>############</td><td>11#1111#11#1#</td><td>315467053586518874343773</td><td>33456685884195248216276831</td></tr>
+                    <tr><td>135</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>136</td><td>1#1111#11#1#</td><td>############</td><td>11#1111#11#1#</td><td>378831003869998209102959</td><td>39963896940278658800904029</td></tr>
+                    <tr><td>137</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>138</td><td>1#1111#11#1#</td><td>############</td><td>11#1111#11#1#</td><td>568631200976927982031871</td><td>47538043784297273023993013</td></tr>
+                    <tr><td>139</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr class="red"><td>140</td><td>1#1111#11#1#</td><td>############</td><td>1111111111110</td><td>436795338701706169519751</td><td>56664986909797862175803989</td></tr>
+                    <tr><td>141</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>142</td><td>1#1111#11#1#</td><td>############</td><td>11#1111#11#1#</td><td>830032620586119205275661</td><td>67107392684983423087156063</td></tr>
+                    <tr><td>143</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>144</td><td>1#1111#11#1#</td><td>############</td><td>10#1110#10#0#</td><td>571257048385358158374293</td><td>79220816483930167872927671</td></tr>
+                    <tr><td>145</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>146</td><td>1#1111#11#1#</td><td>############</td><td>10#1110#10#0#</td><td>734958748017270107465587</td><td>93533941129743767239008137</td></tr>
+                    <tr><td>147</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>148</td><td>1#1111#11#1#</td><td>############</td><td>11#1111#11#1#</td><td>942919373661695474273771</td><td>110272174069934776850283197</td></tr>
+                    <tr><td>149</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>150</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>151</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr class="red"><td>152</td><td>1#1111#11#1#</td><td>############</td><td>1111111111110</td><td>1296930503780196125901829</td><td>151808183070469695264947411</td></tr>
+                    <tr><td>153</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                    <tr><td>154</td><td>1#1111#11#1#</td><td>############</td><td>11#1111#11#1#</td><td>1493050676069222582270003</td><td>177869763219530719529233879</td></tr>
+                    <tr><td>155</td><td class="left" colspan="5">※素数は存在しません</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </ul>
+    <br />
+    <br />
+<hr />
+</body>
+</html>
