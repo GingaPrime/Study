@@ -51,7 +51,11 @@ table tbody tr:hover{
 .table-math {max-width:95vw; overflow-x: hidden; overflow-y: hidden;}
 .table-math table td {    text-align: left;}
 table td.left { text-align: left;}
-table tr.red { color: red;}
+table tr.red { color: red !important;}
+table th.red { 
+	color: red !important;
+	background-color: #FFFF00 !important;
+}
 
 
 
