@@ -1,63 +1,11 @@
 ﻿<html lang="ja">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" name="viewport" content="width=device-width">
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <hr>
-    <h3>基数10以外のギンガ数に銀河素数は存在しない</h3>
-    ABABCCBCBADBは4種類の文字で構成されているので、
-    <br>
-    ギンガ数は4進数以上の全ての基数で表現できる。
-    <br>
-    <br>
-    <ul>
-        <li><h4>4～200進数</h4></li>
-        4～200進数で表した場合の最小最大ギンガ素数は以下の通りで、
-        <br>
-        10進数以外に銀河素数は存在しない。
-        <br>
-        ※37進数以上では割り当てられる文字が存在しないので、1,0以外の数は全て"#"で表しています。
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th class="base">基数</th>
-                        <th class="minmax">最小ギンガ素数</th>
-                        <th class="minmax">最大ギンガ素数</th>
-                        <th class="minmax">和</th>
-                        <th class="decimal2">最小ギンガ素数<BR>(10進数表示)</th>
-                        <th class="decimal2">最大ギンガ素数<BR>(10進数表示)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td class="base">4</td><td class="minmax">212100101231</td><td class="minmax">212100101231</td><td class="minmax">1030200203122</td><td class="decimal2">10028141</td><td class="decimal2">10028141</td></tr>
-                    <tr><td class="base">5</td><td class="left" colspan="5">※基数5の場合素数は存在しません</td></tr>
-                    <tr><td class="base">6</td><td class="minmax">151522525135</td><td class="minmax">515144141521</td><td class="minmax">1111111111100</td><td class="decimal2">684299507</td><td class="decimal2">1927839289</td></tr>
-                    <tr><td class="base">7</td><td class="minmax">121255252132</td><td class="minmax">646400404654</td><td class="minmax">1100655660116</td><td class="decimal2">2598912787</td><td class="decimal2">13259111233</td></tr>
-                    <tr><td class="base">8</td><td class="minmax">131300303143</td><td class="minmax">757566565725</td><td class="minmax">1111067071070</td><td class="decimal2">11995809379</td><td class="decimal2">66536008661</td></tr>
-                    <tr><td class="base">9</td><td class="minmax">121244242182</td><td class="minmax">878733737817</td><td class="minmax">1111078081110</td><td class="decimal2">38849545937</td><td class="decimal2">278873040661</td></tr>
-                    <tr class="red"><td class="base">10</td><td class="minmax">131322323183</td><td class="minmax">979788787927</td><td class="minmax">1111111111110</td><td class="decimal2">131322323183</td><td class="decimal2">979788787927</td></tr>
-                    <tr><td class="base">11</td><td class="minmax">1313aa3a3153</td><td class="minmax">a9a988989a09</td><td class="minmax">1121288282061</td><td class="decimal2">366338189803</td><td class="decimal2">3112233883999</td></tr>
-                    <tr><td class="base">12</td><td class="minmax">151500505175</td><td class="minmax">b7b766767ba7</td><td class="minmax">1111067071160</td><td class="decimal2">1059906133673</td><td class="decimal2">8666515869679</td></tr>
-                    <tr><td class="base">13</td><td class="minmax">121233232172</td><td class="minmax">cbcb77b7bc1b</td><td class="minmax">11110ab0b1090</td><td class="decimal2">2080316897453</td><td class="decimal2">23159072506841</td></tr>
-                    <tr><td class="base">14</td><td class="minmax">131300303143</td><td class="minmax">dbdb99b9bd3b</td><td class="minmax">111109a0a1080</td><td class="decimal2">4942419170503</td><td class="decimal2">56111998480129</td></tr>
-                    <tr><td class="base">15</td><td class="minmax">1212002021c2</td><td class="minmax">ededccdcde8d</td><td class="minmax">11110cd0d1160</td><td class="decimal2">9846627307157</td><td class="decimal2">129166759245283</td></tr>
-                    <tr><td class="base">16</td><td class="minmax">131300303143</td><td class="minmax">fdfdeededf2d</td><td class="minmax">11110ef0f1070</td><td class="decimal2">20972328464707</td><td class="decimal2">279267076136749</td></tr>
-                    <tr><td class="base">17</td><td class="minmax">121200202182</td><td class="minmax">gfgfeefefg8f</td><td class="minmax">11110ef0f1100</td><td class="decimal2">38436426349877</td><td class="decimal2">580598397027437</td></tr>
-                    <tr><td class="base">18</td><td class="minmax">151500505185</td><td class="minmax">hdhdggdgdh8d</td><td class="minmax">11110gh0h10h0</td><td class="decimal2">82374214783073</td><td class="decimal2">1142504778758377</td></tr>
-                    <tr><td class="base">19</td><td class="minmax">1212002021i2</td><td class="minmax">ihihgghghi6h</td><td class="minmax">11110gh0h1160</td><td class="decimal2">129109051204303</td><td class="decimal2">2207164984666249</td></tr>
-                    <tr><td class="base">20</td><td class="minmax">131322323163</td><td class="minmax">jhjhiihihjbh</td><td class="minmax">11111111110i0</td><td class="decimal2">236111497944523</td><td class="decimal2">4075467449423837</td></tr>
-                    <tr><td class="base">21</td><td class="minmax">121200202162</td><td class="minmax">kjkjhhjhjkbj</td><td class="minmax">11110hi0i10i0</td><td class="decimal2">384507196451219</td><td class="decimal2">7339104142308097</td></tr>
-                    <tr><td class="base">22</td><td class="minmax">131322323153</td><td class="minmax">ljljkkjkjl2j</td><td class="minmax">1111111111080</td><td class="decimal2">665375198061533</td><td class="decimal2">12801770415418267</td></tr>
-                    <tr><td class="base">23</td><td class="minmax">121233232192</td><td class="minmax">mlmljjljlm5l</td><td class="minmax">11111001010f0</td><td class="decimal2">1037631227294539</td><td class="decimal2">21873108943948957</td></tr>
-                    <tr><td class="base">24</td><td class="minmax">151500505175</td><td class="minmax">njnjlljljndj</td><td class="minmax">11110lm0m10l0</td><td class="decimal2">1841890271989997</td><td class="decimal2">36266284023219979</td></tr>
-                    <tr><td class="base">25</td><td class="minmax">1212002021g2</td><td class="minmax">ononllnlnojn</td><td class="minmax">11110lm0m11b0</td><td class="decimal2">2579040546907277</td><td class="decimal2">59509105701937373</td></tr>
-                    <tr><td class="base">26</td><td class="minmax">1313003031i3</td><td class="minmax">pnpnmmnmnpln</td><td class="minmax">11110mn0n11e0</td><td class="decimal2">4099901794518611</td><td class="decimal2">95146179768899477</td></tr>
-                    <tr><td class="base">27</td><td class="minmax">121233232192</td><td class="minmax">qpqpmmpmpq8p</td><td class="minmax">11110pq0q10i0</td><td class="decimal2">5979065860956323</td><td class="decimal2">149888418327778381</td></tr>
-                    <tr><td class="base">28</td><td class="minmax">1313223231b3</td><td class="minmax">rprpoopopr2p</td><td class="minmax">11110qr0r10e0</td><td class="decimal2">9193839632071559</td><td class="decimal2">231625073991059137</td></tr>
 ABABACCBCBADBはABCDの4文字で構成されるので基数4（4進数）以上の全ての基数で表現することができます。
 <BR>
 基数Nで最小ギンガ素数と最大ギンガ素数を表したときに和が全ての桁でNになる、という基数が10以外でも有るのか確認してみましたが存在しませんでした。
