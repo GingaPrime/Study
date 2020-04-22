@@ -56,6 +56,10 @@ table th.red {
 	color: red !important;
 	background-color: #FFFF00 !important;
 }
+table th.end { 
+	color: #ffffff !important;
+	background-color: #bbbbbb !important;
+}
 
 
 
