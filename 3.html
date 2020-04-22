@@ -1,67 +1,67 @@
 ﻿<html lang="ja">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" name="viewport" content="width=device-width">
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    銀河素数を持つ文字列は、
+    銀河素数を持つ文字列はギンガマン以外にも存在し、
     <br />
-    例えば基数10に銀河素数を持つ"AB"、"AAB"や、
-    <table>
-        <tr><td>AB</td><td>13</td><td>97</td></tr>
-        <tr><td>AAB</td><td>113</td><td>997</td></tr>
-    </table>
-    基数13に銀河素数を持つ"AAAAAAAABACA"など、
+    例えば"AB"や"AAB"は基数10に銀河素数を持ちます。
+    <div class="table-wrapper">
+	    <table>
+	        <tr><th>文字列</th><th>最小素数</th><th>最大素数</th></tr>
+	        <tr><td>AB</td><td>13</td><td>97</td></tr>
+	        <tr><td>AAB</td><td>113</td><td>997</td></tr>
+	    </table>
+	</div>
+    他にも、基数10以外も対象に含めれば銀河素数を持つ文字列は多数存在します。
+    <HR>
+    計算出来ている範囲内では、
     <br />
-    ※括弧内は10進数で表記した値
-    <div class="table-ginga">
-        <table>
-            <tr><td>AAAAAAAABACA</td><td>111111112151<BR>(1941507095789)</td><td>ccccccccbc8c<br>(23298085120231)</td></tr>
-        </table>
-    </div>
-    文字列のパターンや基数毎に、多数存在する。
+    全文字列パターンの内、約99%の文字列が素数を持ち、
     <br />
-    歌詞の長さごとの銀河素数量は以下の通り。
+    素数を持つ文字列の内、約3%がいずれかの基数に銀河素数を持ち、
+    <br />
+    更にその内の約10%が基数10に銀河素数を持ちます。
     <br />
     <br />
-    ※括弧付きの値は全歌詞パターンの計算が出来ていない、
-    <br />
-    または銀河素数を期待出来る基数量に対して計算量が充分で無い為、
-    <br />
-    少なくとも存在する数量を記載している。
-    <div class="table-ginga">
+    <div class="table-wrapper">
         <table>
             <thead>
                 <tr>
-                    <th>歌詞の長さ</th>
-                    <th>全歌詞パターン数</th>
-                    <th>素数を持つ歌詞の総数</th>
-                    <th>銀河素数歌詞の総数</th>
-                    <th>基数10銀河素数歌詞の総数</th>
+                    <th>文字列長</th>
+                    <th>文字列パターン数</th>
+                    <th>素数を持つ文字列の総数</th>
+                    <th>銀河素数を持つ文字列の総数</th>
+                    <th>基数10に銀河素数を持つ文字列の総数</th>
                 </tr>
             </thead>
             <tbody>
-                <tr><td class="d3">1</td>   <td class="d3"> 1</td>          <td class="d3"> 1</td>          <td class="d3">1</td>   <td class="d3">0</td>   </tr>
-                <tr><td class="d3">2</td>   <td class="d3"> 2</td>          <td class="d3"> 2</td>          <td class="d3">2</td>   <td class="d3">1</td>   </tr>
-                <tr><td class="d3">3</td>   <td class="d3"> 5</td>          <td class="d3"> 5</td>          <td class="d3">4</td>   <td class="d3">1</td>   </tr>
-                <tr><td class="d3">4</td>   <td class="d3"> 15</td>         <td class="d3"> 12</td>         <td class="d3">7</td>   <td class="d3">0</td>   </tr>
-                <tr><td class="d3">5</td>   <td class="d3"> 52</td>         <td class="d3"> 52</td>         <td class="d3">27</td>  <td class="d3">3</td>   </tr>
-                <tr><td class="d3">6</td>   <td class="d3"> 203</td>        <td class="d3"> 183</td>        <td class="d3">93</td>  <td class="d3">12</td>  </tr>
-                <tr><td class="d3">7</td>   <td class="d3"> 877</td>        <td class="d3"> 877</td>        <td class="d3">216</td> <td class="d3">12</td>  </tr>
-                <tr><td class="d3">8</td>   <td class="d3"> 4140</td>       <td class="d3"> 3966</td>       <td class="d3">860</td> <td class="d3">44</td>  </tr>
-                <tr><td class="d3">9</td>   <td class="d3"> 21147</td>      <td class="d3"> 21080</td>      <td class="d3">1605</td>    <td class="d3">213</td> </tr>
-                <tr><td class="d3">10</td>  <td class="d3">115975</td>      <td class="d3">114464</td>      <td class="d3">11240</td>   <td class="d3">391</td> </tr>
-                <tr><td class="d3">11</td>  <td class="d3">678570</td>      <td class="d3">678570</td>      <td class="d3">12951</td>   <td class="d3">1547</td>    </tr>
-                <tr><td class="d3">12</td>  <td class="d3">4213597</td>     <td class="d3">4176938</td>     <td class="d3">(145458)</td>  <td class="d3">13776</td>   </tr>
-                <tr><td class="d3">13</td>  <td class="d3">27644437</td>    <td class="d3"></td>            <td class="d3"></td>    <td class="d3"></td>    </tr>
-                <tr><td class="d3">14</td>  <td class="d3">190899322</td>   <td class="d3"></td>            <td class="d3"></td>    <td class="d3"></td>    </tr>
-                <tr><td class="d3">15</td>  <td class="d3">1382958545</td>  <td class="d3"></td>            <td class="d3"></td>    <td class="d3"></td>    </tr>
-                <tr><td class="d3">16</td>  <td class="d3">10480142147</td> <td class="d3"></td>            <td class="d3"></td>    <td class="d3"></td>    </tr>
+                <tr><td>1</td>   <td> 1</td>          <td> 1</td>          <td>1</td>   <td>0</td>   </tr>
+                <tr><td>2</td>   <td> 2</td>          <td> 2</td>          <td>2</td>   <td>1</td>   </tr>
+                <tr><td>3</td>   <td> 5</td>          <td> 5</td>          <td>4</td>   <td>1</td>   </tr>
+                <tr><td>4</td>   <td> 15</td>         <td> 12</td>         <td>7</td>   <td>0</td>   </tr>
+                <tr><td>5</td>   <td> 52</td>         <td> 52</td>         <td>27</td>  <td>3</td>   </tr>
+                <tr><td>6</td>   <td> 203</td>        <td> 183</td>        <td>93</td>  <td>12</td>  </tr>
+                <tr><td>7</td>   <td> 877</td>        <td> 877</td>        <td>216</td> <td>12</td>  </tr>
+                <tr><td>8</td>   <td> 4140</td>       <td> 3966</td>       <td>860</td> <td>44</td>  </tr>
+                <tr><td>9</td>   <td> 21147</td>      <td> 21080</td>      <td>1605</td>    <td>213</td> </tr>
+                <tr><td>10</td>  <td>115975</td>      <td>114464</td>      <td>11240</td>   <td>391</td> </tr>
+                <tr><td>11</td>  <td>678570</td>      <td>678570</td>      <td>12951</td>   <td>1547</td>    </tr>
+                <tr><td>12</td>  <td>4213597</td>     <td>4176938</td>     <td>(145458)※</td>  <td>13776</td>   </tr>
+                <tr><td>13</td>  <td>27644437</td>    <td></td>            <td></td>    <td></td>    </tr>
+                <tr><td>14</td>  <td>190899322</td>   <td></td>            <td></td>    <td></td>    </tr>
+                <tr><td>15</td>  <td>1382958545</td>  <td></td>            <td></td>    <td></td>    </tr>
+                <tr><td>16</td>  <td>10480142147</td> <td></td>            <td></td>    <td></td>    </tr>
             </tbody>
         </table>
     </div>
-
+    ※文字列長12の範囲については、基数11以上の範囲が充分に計算出来ていない為、
+    <br>
+    銀河素数を持つ文字列の総数は記載の数より多い想定です。
+    <br>
+    （文字列長12は基数30辺りまでしか計算出来ていません）
 </body>
 </html>
